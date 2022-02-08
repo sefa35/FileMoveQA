@@ -14,6 +14,7 @@ function removeFile(file: File, folder: Folder): File {
   return file;
 }
 
+// Search Folder in a List by Folder Id
 function searchFolderByFolderId(id: string, list: List): Folder {
   const folder = list.find((item: Folder) => item.id === id);
   if (folder === undefined || folder === null) {
@@ -23,6 +24,7 @@ function searchFolderByFolderId(id: string, list: List): Folder {
   return folder;
 }
 
+// Search Folder in a List of Folder by File Id
 function searchFolderByFileId(id: string, list: List): Folder {
   const folder = list.find((item: Folder) => {
     return item.files.some((file: File) => file.id === id);
@@ -35,6 +37,7 @@ function searchFolderByFileId(id: string, list: List): Folder {
   return folder;
 }
 
+// Search file in a folder by File Id
 function searchFileByFileId(id: string, folder: Folder): File {
   const file = folder.files.find((item: File) => item.id === id);
   if (file === undefined || file === null) {
