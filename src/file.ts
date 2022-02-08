@@ -1,5 +1,6 @@
-export class File {
+class File {
   public id: string;
+
   public name: string;
 
   constructor(id: string, name: string) {
@@ -7,3 +8,5 @@ export class File {
     this.name = name;
   }
 }
+
+export default File;

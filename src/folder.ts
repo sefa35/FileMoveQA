@@ -1,8 +1,10 @@
-import { File } from './file';
+import File from './file';
 
-export class Folder {
+class Folder {
   id: string;
+
   name: string;
+
   files: Array<File>;
 
   constructor(id: string, name: string, files: Array<File>) {
@@ -11,3 +13,5 @@ export class Folder {
     this.files = files;
   }
 }
+
+export default Folder;
